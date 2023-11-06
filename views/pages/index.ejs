@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('../partials/head'); %>
+  </head>
+  <body class="container">
+    <header><%- include('../partials/header'); %></header>
+
+    <main>
+      <div class="jumbotron">
+        <h1>Instructions</h1>
+        <p>
+          Maintenant que tu sais cracker un JWT faible, utilise tes
+          connaissances pour cracker le site
+          <a href="http://xellonos.freeboxos.fr:7000"
+            >http://xellonos.freeboxos.fr:7000</a
+          >
+        </p>
+        <p>
+          Un JWT t'es donné lorsque tu vas sur
+          <a href="http://xellonos.freeboxos.fr:7000"
+            >http://xellonos.freeboxos.fr:7000/token</a
+          >
+          Retrouve la clé secrète utilisée pour générer le JWT puis génère-en un
+          avec le rôle admin. Pour vérifier qu'il est valide, envoie une requête
+          GET à l'url
+          <a href="http://xellonos.freeboxos.fr:7000"
+            >http://xellonos.freeboxos.fr:7000/admin</a
+          >
+          avec un header Authorization contenant le JWT avec le mot clef Bearer.
+        </p>
+        <p>
+          <u>Par exemple:</u><br /><strong
+            >Authorization: Bearer
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoidXNlciIsImlhdCI6MTY4MTk5MzA2OH0.mYvDKg-1Y0lhtrtS3e5zu7OSuWGsuP7ubBv_NXTven4</strong
+          >
+
+          <br />
+          <br />
+          Tu constates à quel point il est facile de cracker un système
+          d'authentification protégé avec une clé aussi simple. Utilise toujours
+          des clés secrètes longues et générées aléatoirement pour rendre le
+          piratage par force brute pratiquement impossible.
+        </p>
+      </div>
+    </main>
+
+    <footer><%- include('../partials/footer'); %></footer>
+  </body>
+</html>
